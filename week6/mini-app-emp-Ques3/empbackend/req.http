@@ -1,0 +1,35 @@
+POST http://localhost:4000/emp-api/employees
+Content-Type: application/json
+
+{
+    
+  "name": "Srinidhi",
+  "email": "srinidhi@gmail.com",
+  "mobile": 9876543210,
+  "designation": "tester",
+  "companyName": "google"
+
+
+}
+###
+GET http://localhost:4000/emp-api/employees
+###
+PUT http://localhost:4000/emp-api/employees/69ca84d9c34636dd1b82bc07
+Content-Type: application/json
+
+{
+    
+  "name": "Srinidhi",
+  "email": "srinidhi@gmail.com",
+  "mobile": 9876543210,
+  "designation": "abc",
+  "companyName": "google"
+
+
+}
+###
+DELETE http://localhost:4000/emp-api/employees/69ca84d9c34636dd1b82bc07
+
+
+
+
