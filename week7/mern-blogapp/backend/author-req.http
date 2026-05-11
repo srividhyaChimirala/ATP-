@@ -1,0 +1,46 @@
+
+###
+//create new article
+
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69b390781ee2fd1d17076578",
+    "title":"Article-3 by author 1",
+    "category":"js",
+    "content":"test article on js"
+}
+
+
+###
+//read own articles
+
+GET http://localhost:4000/author-api/articles
+
+
+###
+//editing their own rticles
+
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"69b3d97d6d0224ebc9ba84c3",
+    "title":"Article-2 by author 1",
+    "category":"AI",
+    "content":"test article on AI"
+}
+
+
+
+###
+//delete own articles(soft delete)
+//article id can be sent in both url or body but it is better to go with body
+PATCH http://localhost:4000/author-api/articles 
+Content-Type: application/json
+
+{
+    "articleID":"69b4f3f6c74750936de0c3c2",
+    "isArticleActive":true
+}
