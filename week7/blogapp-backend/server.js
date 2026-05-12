@@ -21,7 +21,7 @@ app.use(cookieParser())
 
 
 app.use(cors({
-    origin:["http://localhost:5173"],
+    origin:["https://atp-pdvk.vercel.app"],
     credentials:true
 }))
 
@@ -46,9 +46,14 @@ const connectDB=async()=>{
     try{
         await connect(process.env.DB_URL);
         console.log("Database connected")
-        const port=process.env.PORT
+        //const port=process.env.PORT
         //server starts running only after listen
-        app.listen(port,()=>console.log(`Server listing on ${port}....`))
+        //app.listen(port,()=>console.log(`Server listing on ${port}....`))
+     const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
+});
     }
     catch(err){
         console.log("Error connecting database")
