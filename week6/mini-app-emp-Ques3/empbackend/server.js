@@ -22,8 +22,8 @@ app.use("/emp-api", empRoute);
 // Database Connection
 const connectDB = async () => {
   try {
-    await connect("mongodb://localhost:27017/empdb");
-
+   // await connect("mongodb://localhost:27017/empdb");
+await connect(process.env.MONGO_URL);
     console.log("DB connected");
 
     app.listen(4000, () => {
