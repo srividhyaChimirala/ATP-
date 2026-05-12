@@ -1,6 +1,6 @@
 
 import exp from "express";
-import { verifyToken } from "../middlewares/VerifyToken.js";
+import { verifyToken } from "../middlewares/verifyToken.js";
 import { ArticleModel } from "../models/ArticleModel.js";
 
 export const userApp = exp.Router();
