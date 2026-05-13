@@ -20,7 +20,7 @@ function CreateEmp() {
       setLoading(true);
 //http://localhost:4000/emp-api/employees
       // Make HTTP POST request
-      const res = await fetch("https://atp-8.onrender.com/", {
+      const res = await fetch("https://atp-8.onrender.com/emp-api/employees", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
