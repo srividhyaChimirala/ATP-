@@ -18,9 +18,9 @@ function CreateEmp() {
   const onFormSubmit = async (newEmpObj) => {
     try {
       setLoading(true);
-
+//http://localhost:4000/emp-api/employees
       // Make HTTP POST request
-      const res = await fetch("http://localhost:4000/emp-api/employees", {
+      const res = await fetch("https://atp-8.onrender.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
