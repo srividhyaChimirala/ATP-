@@ -10,9 +10,12 @@ empRoute.post("/employees", async (req, res) => {
   const empDoc = new EmpModel(newEmp);
   await empDoc.save();
 
-  res.status(200).json({
-    message: "Employee created",
-  });
+//   res.status(200).json({
+//     message: "Employee created",
+//   });
+// });
+  res.status(201).json({
+  message: "Employee created",
 });
 
 // Read All Employees
