@@ -2,7 +2,7 @@
 import exp from "express";
 import { UserModel } from "../models/UserModel.js";
 import { ArticleModel } from "../models/ArticleModel.js";
-import { verifyToken } from "../middlewares/VerifyToken.js";
+import { verifyToken } from "../middlewares/verifyToken.js";
 
 export const authorApp = exp.Router();
 
