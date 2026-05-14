@@ -2,9 +2,9 @@ import exp from 'express'
 import {connect} from 'mongoose'
 import {config} from 'dotenv'
 import {userApp} from './APIs/userAPI.js'
-import {adminApp} from './APIs/AdminAPI.js'
-import { authorApp } from './APIs/AuthorApi.js'
-import {commonApp} from './APIs/CommonAPI.js'
+import {adminApp} from './APIs/adminAPI.js'
+import { authorApp } from './APIs/authorApi.js'
+import {commonApp} from './APIs/commonAPI.js'
 import cookieParser from "cookie-parser";
 import cors from 'cors'
 
