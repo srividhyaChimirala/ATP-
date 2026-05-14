@@ -1,10 +1,10 @@
 import exp from 'express'
 import {connect} from 'mongoose'
 import {config} from 'dotenv'
-import {userApp} from './APIs/userAPI.js'
-import {adminApp} from './APIs/adminAPI.js'
-import { authorApp } from './APIs/authorApi.js'
-import {commonApp} from './APIs/commonAPI.js'
+import {userApp} from './APIs/UserAPI.js'
+import {adminApp} from './APIs/AdminAPI.js'
+import { authorApp } from './APIs/AuthorApi.js'
+import {commonApp} from './APIs/CommonAPI.js'
 import cookieParser from "cookie-parser";
 import cors from 'cors'
 
@@ -21,7 +21,7 @@ app.use(cookieParser())
 
 
 app.use(cors({
-    origin:["https://atp-pdvk.vercel.app"],
+    origin:["http://localhost:5173"],
     credentials:true
 }))
 
@@ -46,14 +46,9 @@ const connectDB=async()=>{
     try{
         await connect(process.env.DB_URL);
         console.log("Database connected")
-        //const port=process.env.PORT
+        const port=process.env.PORT
         //server starts running only after listen
-        //app.listen(port,()=>console.log(`Server listing on ${port}....`))
-     const PORT = process.env.PORT || 4000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
-});
+        app.listen(port,()=>console.log(`Server listing on ${port}....`))
     }
     catch(err){
         console.log("Error connecting database")
