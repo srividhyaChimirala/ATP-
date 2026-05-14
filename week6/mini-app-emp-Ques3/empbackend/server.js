@@ -54,9 +54,14 @@ import { empRoute } from "./API/empApp.js";
 const app = exp();
 
 // Add CORS middleware
+// app.use(
+//   cors({
+//     origin: ["http://localhost:5173"],
+//   })
+// );
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: "*",
   })
 );
 
@@ -73,9 +78,14 @@ const connectDB = async () => {
 await connect(process.env.MONGO_URL);
     console.log("DB connected");
 
-    app.listen(4000, () => {
-      console.log("Server listening on port 4000...");
-    });
+    // app.listen(4000, () => {
+    //   console.log("Server listening on port 4000...");
+    // });
+    const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log("Server listening on port", PORT);
+});
   } catch (err) {
     console.log("Error in DB connection:", err.message);
   }
