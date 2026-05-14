@@ -17,7 +17,7 @@ function ListOfEmps() {
 
   const deleteEmployeeById = async (id) => {
     const res = await axios.delete(
-      `http://atp-8.onrender.com/emp-api/employees/${id}`
+      `https://atp-8.onrender.com/emp-api/employees/${id}`
     );
 
     if (res.status === 200) {
@@ -27,7 +27,7 @@ function ListOfEmps() {
 
   async function getEmps() {
     const res = await fetch(
-      "http://atp-8.onrender.com/emp-api/employees",
+      "https://atp-8.onrender.com/emp-api/employees",
       {
         method: "GET",
       }
