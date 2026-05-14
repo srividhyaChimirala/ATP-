@@ -1,7 +1,7 @@
 
 import exp from "express";
 import { verifyToken } from "../middlewares/verifyToken.js";
-import { UserModel } from "../models/userModel.js";
+import { UserModel } from "../models/UserModel.js";
 
 // mini express app
 export const adminApp = exp.Router();
