@@ -28,7 +28,7 @@ function EditEmployee() {
   const saveModifiedEmp = async (modifiedEmp) => {
     try {
       const res = await axios.put(
-        `http://atp-8.onrender.com/emp-api/employees/${state._id}`,
+        `https://atp-8.onrender.com/emp-api/employees/${state._id}`,
         modifiedEmp
       );
 
