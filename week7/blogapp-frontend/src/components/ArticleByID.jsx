@@ -1,4 +1,5 @@
-import { useParams, useLocation, useNavigate } from "react-router";
+// import { useParams, useLocation, useNavigate } from "react-router";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../store/authStore.js";
@@ -80,7 +81,7 @@ function ArticleByID() {
 
     try {
       const res = await axios.patch(
-        "http://localhost:4000/author-api/articles",
+        "https://atp-13.onrender.com/author-api/articles",
         { articleId: article._id, isArticleActive: newStatus },
         { withCredentials: true },
       );
