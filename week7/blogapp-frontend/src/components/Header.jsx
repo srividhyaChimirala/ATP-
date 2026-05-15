@@ -1,4 +1,5 @@
-import { NavLink } from "react-router";
+// import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import { useAuth } from "../store/authStore";
 import {
   navbarClass,
