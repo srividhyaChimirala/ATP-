@@ -11,7 +11,8 @@ import {
   mutedText,
 } from "../styles/common";
 import { useForm } from "react-hook-form";
-import { NavLink, useNavigate } from "react-router";
+//import { NavLink, useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
