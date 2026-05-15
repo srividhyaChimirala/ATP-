@@ -1,5 +1,6 @@
 import { useAuth } from "../store/authStore";
-import { Navigate } from "react-router";
+//import { Navigate } from "react-router";
+import { Navigate } from "react-router-dom";
 import {toast} from "react-hot-toast";
 
 function ProtectedRoute({ children, allowedRoles }) {
