@@ -1,8 +1,8 @@
 
 
 import { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router";
-
+// import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router-dom";
 const Unauthorized = ({ delay = 5000 }) => {
   console.log("unauthorized");
   const navigate = useNavigate();
