@@ -26,7 +26,7 @@ app.use(cookieParser())
 // }))
 
 app.use(cors({
-  origin:["https://atp-13.onrender.com/"],
+  origin:["https://atp-15.onrender.com"],
   credentials:true
 }))
 
