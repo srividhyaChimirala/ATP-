@@ -103,8 +103,8 @@ commonApp.post("/login", async (req, res) => {
   // set cookie
   res.cookie("token", signedToken, {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+    secure: true,
+sameSite: "none",
   });
 
   // remove password
@@ -122,8 +122,8 @@ commonApp.post("/login", async (req, res) => {
 commonApp.get("/logout", (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+  secure: true,
+sameSite: "none",
   });
 
   res.status(200).json({ message: "Logout success" });
