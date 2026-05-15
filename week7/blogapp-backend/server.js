@@ -49,8 +49,9 @@ const connectDB=async()=>{
     try{
         await connect(process.env.DB_URL);
         console.log("Database connected")
-        const port=process.env.PORT
-        //server starts running only after listen
+      //  const port=process.env.PORT
+      const port = process.env.PORT || 4000;  
+      //server starts running only after listen
         app.listen(port,()=>console.log(`Server listing on ${port}....`))
     }
     catch(err){
