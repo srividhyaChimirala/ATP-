@@ -36,26 +36,43 @@ app.use("/author-api",authorApp)
 app.use("/auth",commonApp)
 
 
-//assign port
-const port=process.env.PORT
+// //assign port
+// const port=process.env.PORT
 
-//connect to database
-//install mongoose
+// //connect to database
+// //install mongoose
 
-const connectDB=async()=>{
-    try{
-        await connect(process.env.DB_URL);
-        console.log("Database connected")
-        const port=process.env.PORT
-        //server starts running only after listen
-        app.listen(port,()=>console.log(`Server listing on ${port}....`))
-    }
-    catch(err){
-        console.log("Error connecting database")
-    }
-}
+// const connectDB=async()=>{
+//     try{
+//         await connect(process.env.DB_URL);
+//         console.log("Database connected")
+//         const port=process.env.PORT
+//         //server starts running only after listen
+//         app.listen(port,()=>console.log(`Server listing on ${port}....`))
+//     }
+//     catch(err){
+//         console.log("Error connecting database")
+//     }
+// }
 
-connectDB()
+// connectDB()
+const port = process.env.PORT || 4000;
+
+const connectDB = async () => {
+  try {
+    await connect(process.env.DB_URL);
+
+    console.log("Database connected");
+
+    app.listen(port, () =>
+      console.log(`Server listening on ${port}....`)
+    );
+  } catch (err) {
+    console.log("Error connecting database", err);
+  }
+};
+
+connectDB();
 
 
 
