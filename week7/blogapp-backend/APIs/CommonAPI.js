@@ -129,12 +129,17 @@ commonApp.post("/login", async (req, res) => {
       }
     );
 
-    // set cookie
+    // // set cookie
+    // res.cookie("token", signedToken, {
+    //   httpOnly: true,
+    //   secure: false,
+    //   sameSite: "lax",
+    // });
     res.cookie("token", signedToken, {
-      httpOnly: true,
-      secure: false,
-      sameSite: "lax",
-    });
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+});
 
     // remove password
     let userObj = user.toObject();
@@ -156,11 +161,16 @@ commonApp.post("/login", async (req, res) => {
 
 // Route for Logout
 commonApp.get("/logout", (req, res) => {
+  // res.clearCookie("token", {
+  //   httpOnly: true,
+  //   secure: false,
+  //   sameSite: "lax",
+  // });
   res.clearCookie("token", {
-    httpOnly: true,
-    secure: false,
-    sameSite: "lax",
-  });
+  httpOnly: true,
+  secure: false,
+  sameSite: "lax",
+});
 
   res.status(200).json({
     message: "Logout success",
