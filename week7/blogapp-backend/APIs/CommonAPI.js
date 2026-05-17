@@ -100,6 +100,11 @@ commonApp.post("/login", async (req, res) => {
         message: "Invalid email",
       });
     }
+    if (!user.isUserActive) {
+  return res.status(403).json({
+    message: "Your account is blocked",
+  });
+}
 
     // compare password
     const isMatched = await compare(
