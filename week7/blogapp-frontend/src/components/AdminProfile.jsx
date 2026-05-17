@@ -14,7 +14,7 @@ export default function AdminProfile() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/admin-api/details", {
+      const res = await axios.get("https://blogapp-m811.onrender.com/admin-api/details", {
         withCredentials: true,
       });
       setUsers(res.data.payload);
