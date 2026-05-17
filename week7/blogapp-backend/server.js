@@ -20,10 +20,16 @@ app.use(cookieParser())
 
 
 
+// app.use(cors({
+//     origin:["http://localhost:5173"],
+//     credentials:true
+// }))
+
+
 app.use(cors({
-    origin:["http://localhost:5173"],
-    credentials:true
-}))
+  origin: "https://blogappp-e6x3.onrender.com",
+  credentials: true
+}));
 
 
 
