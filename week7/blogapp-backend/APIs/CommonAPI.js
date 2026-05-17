@@ -192,7 +192,7 @@ commonApp.get(
 // Change Password
 commonApp.put(
   "/password",
-  verifyToken,
+  verifyToken("USER", "AUTHOR", "ADMIN"),
   async (req, res) => {
     try {
       const { currentPassword, newPassword } =
